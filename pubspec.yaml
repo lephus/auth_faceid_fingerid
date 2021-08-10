@@ -1,0 +1,22 @@
+name: auth_faceid_fingerid
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.7.0 <3.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 3.26.0
+  flutter_biometrics: 0.2.0
+  local_auth: 1.1.6
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+
