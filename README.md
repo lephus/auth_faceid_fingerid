@@ -1,3 +1,41 @@
+===== IOS
+> info.plist
+<key>NSFaceIDUsageDescription</key>
+    <string>Why is my app authenticating using face id?</string>
+
+===== ANDROID
+> MainActivity.java
+
+import android.os.Bundle;
+import io.flutter.app.FlutterFragmentActivity;
+import io.flutter.plugins.flutter_plugin_android_lifecycle.FlutterAndroidLifecyclePlugin;
+import io.flutter.plugins.localauth.LocalAuthPlugin;
+
+public class MainActivity extends FlutterFragmentActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        FlutterAndroidLifecyclePlugin.registerWith(
+                registrarFor(
+                        "io.flutter.plugins.flutter_plugin_android_lifecycle.FlutterAndroidLifecyclePlugin"));
+        LocalAuthPlugin.registerWith(registrarFor("io.flutter.plugins.localauth.LocalAuthPlugin"));
+    }
+}
+
+
+>> AndroidMainifest.xml
+<uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 # auth_faceid_fingerid
 
 A new Flutter project.
